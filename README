@@ -12,10 +12,6 @@ vim owner1.diff
 on sceen 2:
 ./code-review/seediff.sh owner1.diff Line
 
-or 
-
-./code-review/opennew.sh owner1.diff Line
-
 
 
 
