@@ -4,6 +4,8 @@ mkdiff git@github.com:owner1/repo.git  git@github.com:owner2/repo.git
 
 Then:
 
+screen
+
 on screen 1:
 vim owner1.diff
 
