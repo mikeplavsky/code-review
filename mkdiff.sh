@@ -23,6 +23,6 @@ clone $repo1 $dir1
 clone $repo2 $dir2
 
 echo "creating diff file for $dir1 and $dir2"
-diff -qr $dir1 $dir2 | sort > res.diff    
+diff -qr $dir1 $dir2 | sort > $dir1.diff    
 
 echo "Done"
