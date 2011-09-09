@@ -1,0 +1,19 @@
+First:
+
+mkdiff git@github.com:owner1/repo.git  git@github.com:owner2/repo.git
+
+Then:
+
+on screen 1:
+vim owner2.diff
+
+on sceen 2:
+./code-review/seediff.sh owner2.diff Line
+
+or 
+
+./code-review/opennew.sh owner2.diff Line
+
+
+
+
