@@ -8,7 +8,7 @@ screen
 
 on screen 1:
 
-vim canged.diff
+vim changed.diff
 or
 vim new.diff
 
