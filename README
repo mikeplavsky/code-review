@@ -7,11 +7,20 @@ Then:
 screen
 
 on screen 1:
-vim owner1.diff
+
+vim canged.diff
+or
+vim new.diff
 
 on sceen 2:
-./code-review/seediff.sh owner1.diff Line
 
+./code-review/seediff.sh Line
+or 
+./code-review/opennew.sh Line
+
+on screen 3:
+
+./code-review/stat.awk
 
 
 

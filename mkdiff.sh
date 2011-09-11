@@ -22,7 +22,12 @@ clone(){
 clone $repo1 $dir1
 clone $repo2 $dir2
 
-echo "creating diff file for $dir1 and $dir2"
-diff -qrN $dir1 $dir2 | sort > $dir1.diff    
+echo "creating diff files for $dir1 and $dir2"
+
+diff -qrN $dir1 $dir2 | sort > changed.diff
+echo "changed.diff done"
+
+diff -qr $dir1 $dir2 | grep "Only in" | sort > new.diff
+echo "new.diff done"
 
 echo "Done"
