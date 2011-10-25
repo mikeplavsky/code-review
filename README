@@ -1,6 +1,6 @@
 First:
 
-mkdiff git@github.com:owner1/repo.git  git@github.com:owner2/repo.git
+mkdiff git@github.com:forked(changed)/repo.git  git@github.com:main/repo.git
 
 Then:
 
