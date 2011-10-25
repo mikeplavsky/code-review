@@ -19,17 +19,9 @@ BEGIN {
 
 
   ext_stat( "changed.diff", "Files .*[.](.*) and", changed )
-  ext_stat( "new.diff", "Only in .*[.](.*)", new )
+  ext_stat( "new.diff", ".*[.](.*)", new )
 
   for (e in changed) { sum += changed[e]; }
-
-  for (e in changed) { 
-    if (new[e]) {
-      changed[e] -= new[e];
-      if (!changed[e]) {delete changed[e];}
-    }
-    else { delete new[e]; }
-  }
 
   print "\nChanged Files:\n"
   print_array( changed )
