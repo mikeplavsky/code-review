@@ -6,7 +6,10 @@ dir2=$2
 echo "creating diff files for $dir1 and $dir2"
 
 diff -qr $dir1 $dir2 | sort > all.diff
+
 cat all.diff | grep -v "Only in" > changed.diff
+cat all.diff | grep -v "Only in" | sed -e "s/ and .*$//;s/Files //" > rchanged.diff
+
 echo "changed.diff done"
 
 path=`dirname $0`
