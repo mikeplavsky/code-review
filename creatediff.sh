@@ -11,6 +11,6 @@ echo "changed.diff done"
 
 path=`dirname $0`
 
-cat all.diff | grep "Only in" | sort | grep -v "GitQuest" | $path/sedproc | xargs -l1 find > new.diff
+cat all.diff | grep "Only in" | sort | grep -v "$dir2" | $path/sedproc | xargs -l1 find > new.diff
 echo "new.diff done"
 
