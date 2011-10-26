@@ -8,9 +8,9 @@ screen
 
 on screen 1:
 
-vim changed.diff
+vim rchanged.diff
 or
-vim new.diff
+vim rnew.diff
 
 on sceen 2:
 
