@@ -1,7 +1,11 @@
 #!/bin/bash
 
-dir1=`echo $1 | sed -e "s/\/$//"` 
-dir2=`echo $2 | sed -e "s/\/$//"`
+rm_slash() {
+  echo $1 | sed -e "s/\/$//" 
+}
+
+dir1=`rm_slash $1`
+dir2=`rm_slash $2`
 
 echo "creating diff files for $dir1 and $dir2"
 
