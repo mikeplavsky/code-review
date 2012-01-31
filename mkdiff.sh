@@ -1,6 +1,8 @@
 #!/bin/bash
 
 repo1=$1
+branch=$3
+
 repo2=$2 
 
 gdir(){
@@ -13,14 +15,20 @@ dir2=`gdir $repo2`
 clone(){
 
   echo "clonning $1"
+
   rm -rf $2
   git clone $1 $2
+  
+  cd $2 
+  git checkout $3
+  cd ..
+
   rm -rf $2/.git
 
 }
 
-clone $repo1 $dir1
-clone $repo2 $dir2
+clone $repo1 $dir1 $branch
+clone $repo2 $dir2 "master"
 
 path=`dirname $0`
 $path/creatediff.sh $dir1 $dir2
